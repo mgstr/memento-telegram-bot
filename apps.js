@@ -21,7 +21,6 @@ bot.onText(/^[^\/].*/, function (msg, match) {
     })
 
     client.on('data', function(data) {
-	    //console.log('received: ' + data)
         bot.sendMessage(msg.chat.id, data)
     })
 
