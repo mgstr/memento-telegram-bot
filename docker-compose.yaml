@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  backend:
+    image: mgstr/memento-cli:latest
+  bot:
+    image: mgstr/memento-bot:latest
+    links:
+      - backend
+    environment:
+      - TELEGRAM_TOKEN
